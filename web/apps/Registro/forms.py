@@ -10,7 +10,7 @@ class MensajeForm(forms.ModelForm):
             'nombre': 'Nombre',
             'rut': 'Rut',
             'email': 'Email',
-            'gato': 'Gato favorito',
+            'gato': 'Gato favorito + mensaje',
             'telefono': 'telefono',
 
         }

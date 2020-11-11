@@ -33,3 +33,20 @@ class MensajeDelete(DeleteView):
     model = Mensaje
     template_name = 'Registro/mensaje_delete.html'
     success_url = reverse_lazy('list_mensajes')
+
+def mantenedor(request):
+    lista= Mensaje.objects.all()
+    rut = request.GET.get('rut-mensajes')
+    nombre_gato = request.GET.get('nombre-gato')
+
+    if 'btn-buscarRutMensajes' in request.GET:
+       if rut: 
+           lista= Mensaje.objects.filter(rut__icontains=rut)
+    elif 'btn-nombre-gato' in request.GET:
+        if nombre_gato:
+            lista= Mensaje.objects.filter(gato__icontains=nombre_gato)
+      
+    data = {
+        'object_list': lista
+    }
+    return render(request, 'Registro/list_mensajes.html', data)

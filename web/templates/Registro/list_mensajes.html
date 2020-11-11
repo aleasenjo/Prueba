@@ -1,13 +1,28 @@
-{% extends 'Registro/base.html' %} 
+{% extends 'base.html' %}
 
-{% block titulo_principal %}
+{% block title %}Home Page{% endblock title %}
 
-<div id="titulo_pagina">
-    Lista de Mensajes Registradss
-</div>
-{% endblock %} 
+{% block content %} 
+<br>
+<br>
+<br>
+{% if object_list %}
+<div class="container">
+<form class="form-inline mb-5" method="GET">
+    <div class="form-group mx-3">
+        <label class="mr-2">Buscar por rut de mensaje:</label>
+        <input type="text" class="form-control mr-2" name="rut-mensajes">       
+        <button class="btn btn-secondary" type="submit" name="btn-buscarRutMensajes">Buscar</button>            
+    </div>
 
-{% block content %} {% if object_list %}
+    <div class="form-group mx-3">
+        <label class="mr-2">Buscar por gato de mensaje:</label>
+        <input type="text" class="form-control mr-2" name="nombre-gato">            
+        <button class="btn btn-secondary" type="submit" name="btn-nombre-gato">Buscar</button>            
+    </div>        
+
+</form>
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -26,13 +41,15 @@
             <td>{{ mensaje.email }}</td>
             <td>{{ mensaje.telefono }}</td>
             <td>{{ mensaje.gato }}</td>
-
+            {% if user.is_superuser %}
             <td><a class="btn btn-primary" href="{% url 'edit_mensaje' mensaje.id %}">Editar</a></td>
             <td><a class="btn btn-danger" href="{% url 'del_mensaje' mensaje.id %}">Eliminar</a></td>
+            {% endif %}
         </tr>
         {% endfor %}
     </tbody>
 </table>
+</div>
 
 {% else %}
     <h1>No hay registros de mensajes</h1>

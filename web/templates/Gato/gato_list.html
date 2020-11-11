@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container">
+<h1 class="display-3">Gatos</h1>
+<hr>
+<a class="btn" role="button" href="{% url 'gatos_form' %}">Agregar</a>
+<hr>
+
+{% if not object_list %}
+<h1>No hay registro de gatos</h1>
+<br><br><br><br><br><br><br><br>
+{% else %}
+<table class="table table-bordered">
+    <thead>
+         <tr>
+             <td>Fotografia</td>
+             <td>Nombre</td>
+             <td>Descripcion</td>
+         </tr>
+    </thead>
+    <tbody>  
+         {% for gato in object_list %}      
+         <tr>
+             <td><img src= ../../static/images/{{ gato.fotografia }} style="width: 100px;"/> </td>
+             <td>{{ gato.nombre }}</td>
+             <td>{{ gato.descripcion }}</td>
+             <td>
+                 <a class="btn btn-primary" href="{% url 'gatos_update' gato.id%}">  Editar  </a>
+                 <a class="btn btn-danger" href="{% url 'gatos_borrar' gato.id%}">Eliminar</a>
+             </td>
+             
+         </tr>
+         {% endfor %}                                
+    </tbody>
+</table>
+{% endif %}
+
+</div>
+
+{% endblock %}

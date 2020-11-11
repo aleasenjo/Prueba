@@ -1,0 +1,95 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block content %} 
+    <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://www.purina.es/sites/g/files/mcldtz1656/files/2017-10/Getting-A-Cat.jpg')">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">El gato</h1>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-12">
+        <p>El gato doméstico (Felis silvestris catus), llamado popularmente gato, y de forma coloquial minino, entre otros nombres, es un mamífero carnívoro de la familia Felidae. Es una subespecie domesticada por la convivencia con el ser humano.</p>
+        <p>El nombre actual en muchas lenguas proviene del latín vulgar catus. Paradójicamente, catus aludía a los gatos salvajes, mientras que los gatos domésticos, en latín, eran llamados felis.</p>
+        <p>Como resultado de mutaciones genéticas, cruzamiento y selección artificial, hay numerosas razas. Algunas, como la raza Sphynx o la Peterbald están desprovistas de pelo; otras carecen de cola, como los gatos de la raza Manx, y algunas tienen coloraciones atípicas, como los llamados gatos azules.</p>
+        <p>El gato se comunica a través de vocalizaciones. Las más populares son su característico maullido y el ronroneo, pero puede aullar, gemir, gruñir y bufar.11​ Además, adopta poses o expresiones que informan, a sus congéneres, sus enemigos o sus cuidadores, de su ánimo o sus intenciones.</p>
+        <p>Junto con el perro, es el animal doméstico más popular, como mascota, como ayuda en la lucha contra roedores o ambas cosas.</p>
+        <p>Por su amplio abanico de presas potenciales, por su alta eficiencia como depredador, y por su elevado éxito reproductivo –especialmente si se suministra artificialmente alimento a las colonias sin tomar medidas adicionales para limitar su fertilidad– el gato doméstico está incluido en la lista 100 de las especies exóticas invasoras más dañinas del mundo12​ de la Unión Internacional para la Conservación de la Naturaleza.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
+    <h2>Informacion curiosa</h2>
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="https://gatodomestico.com/wp-content/uploads/2018/09/cu%C3%A1nto-tarda-un-gato-en-crecer-5.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a>Esperanza de vida</a>
+            </h4>
+            <p class="card-text">Los gatos domésticos machos tienen una esperanza de vida de entre doce y catorce años, mientras que las hembras suelen vivir uno o dos años más. El ejemplo más longevo del que se tiene registro vivió treinta y ocho años.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="https://pbs.twimg.com/media/ET96s8HWkAAMA6m.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a>Genero segun su color</a>
+            </h4>
+            <p class="card-text">Los gatos tricolores o de hasta cuatro colores son exclusivamente hembras, o en machos que tengan por anomalía genética dos cromosomas X (machos XXY), lo que habitualmente produce un macho estéril (Síndrome de Klinefelter).</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="https://i.pinimg.com/originals/b0/b0/6d/b0b06df2ba8724265ca1ed6690862ae3.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a>Orejas particulares</a>
+            </h4>
+            <p class="card-text">Sus treinta y dos músculos individuales en la oreja le permiten oír direccionalmente. Puede mover cada oreja independientemente de la otra. Gracias a esta capacidad, puede mover su cuerpo en una dirección y apuntar sus orejas en otra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+
+    <!-- Call to Action Section -->
+    
+
+  </div>
+{% endblock content %}

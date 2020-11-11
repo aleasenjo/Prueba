@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}GatoPedia{% endblock title %}
+
+
+{% block content %}
+<br>
+    <h1>Agregar USUARIO</h1>
+    
+    <div class="content container">
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button class="rainbow rainbow-1" id="boton" type="submit">GRABAR</button>
+    </form>
+    </div>
+<br>
+<br>
+{% endblock %}

@@ -1,16 +1,21 @@
-{% extends 'Registro/base.html' %} 
+{% extends 'base.html' %}
 
-{% block titulo_principal %}
+{% block title %}Home Page{% endblock title %}
 
-<div id="titulo_pagina">
-    Agregar/Editar Mensaje
-</div>
-{% endblock %} 
-
-{% block content %}
-<form method="POST">
+{% block content %} 
+<br>
+<br>
+<br>
+<div class="container">
+<form id="form-cuidados" class="jumbotron" action="#" method="POST" autocomplete="on">
+    <h4 class="text-center font-weight-bold">Dejanos tu mensaje junto a tu gato favorito!</h4>
         {% csrf_token %}
         {{ form }}
-        <button type="submit">GRABAR</button>
+        <br>
+        <button class="rainbow rainbow-1" id="boton" type="submit">GRABAR</button>
 </form> 
-{% endblock %}
+</div>
+<br>
+<br>
+<br>
+{% endblock content %}

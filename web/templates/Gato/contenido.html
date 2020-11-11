@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container">
+{% if not object_list %}
+<h1>No hay registro de gatos</h1>
+<br><br><br><br><br><br><br><br>
+{% else %}
+<h1 class="mt-4 mb-3">Contenido</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">inicio</a>
+      </li>
+      <li class="breadcrumb-item active">Contenido</li>
+    </ol>
+    <div class="row">
+         {% for gato in object_list %}
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <p><img class="card-img-top" src= ../../static/images/{{ gato.fotografia }}></p>
+            <div class="card-body">
+                <h4 class="card-title">
+                <a>{{ gato.nombre }}</a>
+                </h4>
+                <p class="card-text">{{ gato.descripcion }}</p>
+            </div>
+        </div>
+        </div>      
+         {% endfor %}                                
+    </div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}
